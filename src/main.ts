@@ -1,14 +1,19 @@
+// 初始化相关样式优先加载
 import './styles/_normalize.css'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'mavon-editor/dist/css/index.css'
 
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+// 按需引用组件
 import * as elementComponents from './plugins/element-ui'
+import mavonEditor from 'mavon-editor'
 
 Vue.config.productionTip = false
 
+Vue.use(mavonEditor)
 // TODO 使用 any 类型不太妥当
 Object.keys(elementComponents).forEach((key: string): void => {
   Vue.use((elementComponents as any)[key])

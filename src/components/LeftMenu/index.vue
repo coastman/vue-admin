@@ -9,14 +9,10 @@
         v-for="(item, index) in routes"
         :index="String(index + 1)"
         :key="index">
-        {{ item.meta.name }}
+        <router-link class="link" :to="item.path">
+          {{ item.meta.name }}
+        </router-link>
       </el-menu-item>
-      <!-- <el-submenu
-        v-for="(item, index) in routes"
-        :index="String(index + 1)"
-        :key="index">
-        dsdsd
-      </el-submenu> -->
     </el-menu>
   </div>
 </template>
@@ -30,7 +26,6 @@ import { routes } from '@/router'
 })
 export default class extends Vue {
   get routes () {
-    // console.log('====>', this.$route)
     return routes
   }
 
@@ -43,5 +38,16 @@ export default class extends Vue {
 <style lang="scss" scoped>
   .el-menu {
     border: none;
+
+    .link {
+      text-decoration: none;
+
+      &:link,
+      &:hover,
+      &:active,
+      &:visited {
+        color:inherit;
+      }
+    }
   }
 </style>

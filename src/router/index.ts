@@ -24,10 +24,18 @@ export const routes: RouteConfig[] = [
   {
     path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    component: Home,
+    redirect: '/about/index',
     meta: {
       name: 'About'
-    }
+    },
+    children: [
+      {
+        path: 'index',
+        name: 'about',
+        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+      }
+    ]
   }
 ]
 

@@ -25,11 +25,11 @@ import { routes } from '@/router'
   name: 'LeftMenu'
 })
 export default class extends Vue {
-  get routes () {
+  get routes() {
     return routes
   }
 
-  created () {
+  created() {
     console.log(this.routes)
   }
 }

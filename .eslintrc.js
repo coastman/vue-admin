@@ -17,6 +17,7 @@ module.exports = {
     // 关闭不让声明 any 类型
     '@typescript-eslint/no-explicit-any': 'off',
     // 关闭自动推断类型后，不能声明类型
-    '@typescript-eslint/no-inferrable-types': 'off'
+    '@typescript-eslint/no-inferrable-types': 'off',
+    "space-before-function-paren": ["error", "never"],
   }
 }

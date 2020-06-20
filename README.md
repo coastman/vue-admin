@@ -13,7 +13,7 @@
   # 启动
   npm run dev    # 开发环境运行
   npm run build  # 打包
-  npm run lint   # eslint 校验
+  npm run lint   # Eslint 校验
 ```
 
 ## 常用规范
@@ -43,3 +43,54 @@ type 类型:
 * [element 官方文档](https://element.eleme.cn/#/zh-CN/component/quickstart)
 
 * [Git Commit 规范](https://segmentfault.com/a/1190000009048911)
+
+## 目录结构
+```
+vue-admin/
+   |
+   ├──public/                    * 不需经 webpack 处理的静态资源
+   |
+   ├──src/                       * 项目核心代码
+   │   │
+   │   │──api                    * 后端服务接口
+   │   │
+   │   │──assets                 * 需经 webpack 处理的静态资源
+   │   │
+   │   │──components             * 局部组件
+   │   │
+   │   │──plugins                * 第三方插件
+   │   │
+   │   │──router                 * 路由
+   │   │
+   │   │──store                  * Vuex 全局数据状态管理
+   │   │
+   │   │──styles                 * CSS 样式
+   │   │
+   │   │──views                  * 页面组件
+   │   │
+   │   │──App.vue                * 根组件
+   │   │
+   │   │──main.ts                * 入口文件
+   │   │
+   │   └──*****                  * TS 类型声明文件
+   │
+   ├──.browserslistrc            * 浏览器兼容文件
+   │
+   │──.editorconfig              * 编码风格配置
+   │
+   │──.eslintrc.js               * Eslint 配置
+   │
+   │──.gitignore                 * Git 忽略文件配置
+   │
+   │──babel.config.js            * Babel 配置
+   │
+   │──CHANGELOG.md               * 版本更新记录
+   │
+   │──package.json               * 依赖信息
+   │
+   │──README.md                  * 项目信息
+   │
+   │──tsconfig.json              * TS 配置
+   │
+   └──vue.config.js              * webpack 配置
+```

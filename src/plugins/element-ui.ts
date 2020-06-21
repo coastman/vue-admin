@@ -4,5 +4,6 @@ export {
   Select,
   Menu,
   Submenu,
-  MenuItem
+  MenuItem,
+  Input
 } from 'element-ui'

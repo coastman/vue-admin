@@ -7,11 +7,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+import API from '@/api'
 // 按需引用组件
 import * as elementComponents from './plugins/element-ui'
 import mavonEditor from 'mavon-editor'
 
 Vue.config.productionTip = false
+Vue.prototype.$api = API
 
 Vue.use(mavonEditor)
 // TODO 使用 any 类型不太妥当

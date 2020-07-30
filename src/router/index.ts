@@ -6,38 +6,32 @@ const Category = () => import('../views/pages/Category.vue')
 
 Vue.use(VueRouter)
 
+export const childrenRoutes = [
+  {
+    path: '/Home',
+    name: 'Article',
+    component: Article,
+    meta: {
+      name: '文章发布'
+    },
+  },
+  {
+    path: '/Category',
+    name: 'Category',
+    component: Category,
+    meta: {
+      name: '分类管理'
+    },
+  }
+]
+
 export const routes: RouteConfig[] = [
   {
     path: '/',
     name: 'Home',
     component: Home,
     redirect: '/Home',
-    meta: {
-      name: '文章发布'
-    },
-    children: [
-      {
-        path: 'home',
-        name: 'Article',
-        component: Article
-      }
-    ]
-  },
-  {
-    path: '/category',
-    name: 'Home',
-    component: Home,
-    redirect: '/category/index',
-    meta: {
-      name: '分类管理'
-    },
-    children: [
-      {
-        path: 'index',
-        name: 'Category',
-        component: Category
-      }
-    ]
+    children: childrenRoutes
   }
 ]
 

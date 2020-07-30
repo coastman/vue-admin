@@ -13,7 +13,8 @@ import {
   TableColumn,
   Form,
   FormItem,
-  MessageBox
+  MessageBox,
+  Pagination
 } from 'element-ui'
 import Vue from 'vue'
 
@@ -28,6 +29,7 @@ Vue.use(Table)
 Vue.use(TableColumn)
 Vue.use(Form)
 Vue.use(FormItem)
+Vue.use(Pagination)
 
 Vue.prototype.$message = Message
 Vue.prototype.$notify = Notification

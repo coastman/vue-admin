@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 const Article = () => import('../views/pages/Article.vue')
+const Category = () => import('../views/pages/Category.vue')
 
 Vue.use(VueRouter)
 
@@ -17,23 +18,24 @@ export const routes: RouteConfig[] = [
     children: [
       {
         path: 'home',
+        name: 'Article',
         component: Article
       }
     ]
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/category',
+    name: 'Home',
     component: Home,
-    redirect: '/about/index',
+    redirect: '/category/index',
     meta: {
-      name: 'About'
+      name: '分类管理'
     },
     children: [
       {
         path: 'index',
-        name: 'about',
-        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+        name: 'Category',
+        component: Category
       }
     ]
   }
